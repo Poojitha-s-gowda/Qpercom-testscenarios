@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "db032858-4323-4383-9fd0-63b4d6324937",
+		"name": "QperAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://devchoice.qpersoft.com/api/admin/add_test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4495272a-6b44-4bf4-859f-5418e225296f",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Exam Added successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"general\": \r\n   { \"test_name\":  \"testExam\",\r\n     \"show_desc\":  \"true\",\r\n     \"enable_desc\":  \"false\",\r\n     \"is_enable\":  \"false\" },\r\n  \"timing\": \r\n   { \"open\":  \"1595324796179\",\r\n     \"close\":  \"1595324796179\",\r\n     \"limit\":  0,\r\n     \"expires\":  0 },\r\n  \"grading\": \r\n   { \"is_standard\":  \"true\", \"passing\":  40, \"attempts\":  1, \"grading_method\":  1 },\r\n   \"id\":38,\r\n  \"layout\": \r\n   { \"qpa\":  1,\r\n     \"navigation\":  \"true\",\r\n     \"shuffle_ques\":  \"false\",\r\n     \"shuffle_ans\":  \"false\",\r\n     \"answer_grade\":  0,\r\n     \"question_grade\":  0,\r\n     \"order\":  1 },\r\n  \"after_exam\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"1\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"2\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"3\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"4\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"5\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"6\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"7\", \"is_check\":  \"true\" } ],\r\n  \"after_attempt\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"1\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"2\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"3\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"4\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"5\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"6\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"7\", \"is_check\":  \"true\" } ],\r\n  \"created_by\":  \"dharmendra.kumar@teknotrait.com\",\r\n  \"created_on\":  1595325920762 }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/add_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"add_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://devchoice.qpersoft.com/api/admin/update_test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5a701f76-124c-486c-8064-3fbd971fa761",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Updated Successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"update\": { \"general\": \r\n   { \"test_name\":  \"testExam3\",\r\n     \"show_desc\":  \"true\",\r\n     \"enable_desc\":  \"false\",\r\n     \"is_enable\":  \"false\" },\r\n  \"timing\": \r\n   { \"open\":  \"1595324796179\",\r\n     \"close\":  \"1595324796179\",\r\n     \"limit\":  0,\r\n     \"expires\":  0 },\r\n  \"grading\": \r\n   { \"is_standard\":  \"true\", \"passing\":  40, \"attempts\":  1, \"grading_method\":  1 },\r\n   \"id\":\"38\",\r\n  \"layout\": \r\n   { \"qpa\":  1,\r\n     \"navigation\":  \"true\",\r\n     \"shuffle_ques\":  \"false\",\r\n     \"shuffle_ans\":  \"false\",\r\n     \"answer_grade\":  0,\r\n     \"question_grade\":  0,\r\n     \"order\":  1 },\r\n  \"after_exam\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"1\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"2\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"3\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"4\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"5\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"6\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"7\", \"is_check\":  \"true\" } ],\r\n  \"after_attempt\": \r\n   [ { \"id\":  \"0\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"1\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"2\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"3\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"4\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"5\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"6\", \"is_check\":  \"true\" },\r\n     { \"id\":  \"7\", \"is_check\":  \"true\" } ],\r\n  \"created_by\":  \"dharmendra.kumar@teknotrait.com\",\r\n  \"created_on\":  1595325920762 }}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/update_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"update_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://devchoice.qpersoft.com/api/admin/delete_test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2fdd1d7b-8c05-4425-993b-c6de774fafd7",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Deleted  successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"_id\": 36\r\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/api/admin/delete_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"delete_test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{URL}}/api/admin/courses_test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "89518468-3853-42b2-9c1b-2415a496a5e4",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Fetched  successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/api/admin/courses_test",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"courses_test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
